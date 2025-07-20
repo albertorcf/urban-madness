@@ -33,21 +33,22 @@ A game about urban madness, chaos and routine.
    - Tipagem Typescript sem erros
    - Arquivo de configurações globais criado em `src/config/config`.ts
 
-4. [ ] **Adicionar grupo de obstáculos (dois tipos)**  
+4. [ ] **Responsividade e controles mobile**  
+   - Ajustar o viewport conforme a tela do usuário, mantendo a proporção  
+   - Garantir botões móveis (mobile first)  
+   - Manter funcionalidade no desktop
+
+5. [ ] **Adicionar grupo de obstáculos (dois tipos)**  
    - Obstáculos descendo  
    - Colisão faz o player ficar vermelho
 
-5. [ ] **Organizar assets (sprites PNG/SVG)**  
+6. [ ] **Organizar assets (sprites PNG/SVG)**  
    - Preparar workflow para usar imagens reais nos obstáculos
 
-6. [ ] **Modularizar lógica**  
+7. [ ] **Modularizar lógica**  
    - Extrair funções/objetos para arquivos próprios  
    - Facilitar manutenção  
    - Preparar para futuras entidades (player/obstacle/bonus/etc.)
-
-7. [ ] **Responsividade e controles mobile**  
-   - Garantir botões móveis (mobile first)  
-   - Manter funcionalidade no desktop
 
 8. [ ] **ToDo List**  
    - Manter `README.md` ou `TODO.md` atualizado com pendências e ideias  
@@ -60,7 +61,7 @@ A game about urban madness, chaos and routine.
 ```sh
 clear && date && tree -a -L 3 -I 'node_modules' -I '.git'
 
-sex 18 jul 2025 19:58:07 -03
+dom 20 jul 2025 19:36:26 -03
 .
 ├── .gitignore
 ├── index.html
@@ -71,17 +72,18 @@ sex 18 jul 2025 19:58:07 -03
 │   └── vite.svg
 ├── README.md
 ├── src
-│   ├── assets
+│   ├── config
+│   │   └── config.ts
 │   ├── counter.ts
 │   ├── main.ts
 │   ├── scenes
+│   │   └── MainScene.ts
 │   ├── style.css
 │   ├── typescript.svg
-│   ├── utils
 │   └── vite-env.d.ts
 └── tsconfig.json
 
-6 directories, 13 files
+4 directories, 15 files
 
 ```
 
