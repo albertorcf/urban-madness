@@ -3,6 +3,7 @@ A game about urban madness, chaos and routine.
 
 - 📝 [Roadmap](#-roadmap)
 - 🗂️ [Estrutura de pastas e arquivos do projeto](#️-estrutura-de-pastas-e-arquivos-do-projeto)
+- [Diretrizes para desenvolvimento - Workflow de trabalho](#diretrizes-para-desenvolvimento---workflow-de-trabalho)
 
 
 # 📝 Roadmap
@@ -82,3 +83,10 @@ sex 18 jul 2025 19:58:07 -03
 6 directories, 13 files
 
 ```
+
+
+# Diretrizes para desenvolvimento - Workflow de trabalho
+
+## Instruções para ChatBot de IA - Copilot, ChatGPT, Gemini, etc.
+
+- Manter os comentários existentes e acrescente novos comentários onde achar relevante. Separe os blocos de código que implementem funcionalidades diferentes com comentários bem descritivos no início de cada um. Pode usar emojis a vontade para destacar comentários e emojis de separadores para separar blocos.
