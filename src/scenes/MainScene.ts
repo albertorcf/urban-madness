@@ -1,13 +1,10 @@
 // src/scenes/MainScene.ts
 import Phaser from 'phaser'
+import { GAME_VERSION, BASE_WIDTH, BASE_HEIGHT } from '../config/config'
 
 // 🟦━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // SCENE PRINCIPAL DO JOGO (MainScene)
 // 🟦━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-const GAME_VERSION = '0.1.0'
-const BASE_WIDTH = 540
-const BASE_HEIGHT = 960
 
 export class MainScene extends Phaser.Scene {
   // Tipos para player e controles

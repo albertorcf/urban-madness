@@ -24,15 +24,16 @@ A game about urban madness, chaos and routine.
      - `/src/utils`  
      - `/src/components` (opcional/futuro)
 
-3. **Configurar uma Scene básica**  
+3. ✅ **Configurar uma Scene básica**  
    - Separar lógica da cena em `src/scenes/`  
    - Player azul movendo  
    - Controles funcionando  
    - Versão do game na tela  
    - Responsividade mantida  
    - Tipagem Typescript sem erros
+   - Arquivo de configurações globais criado em `src/config/config`.ts
 
-4. [ ] **Adicionar grupo de obstáculos (rect simples, dois tipos)**  
+4. [ ] **Adicionar grupo de obstáculos (dois tipos)**  
    - Obstáculos descendo  
    - Colisão faz o player ficar vermelho
 

@@ -1,6 +1,8 @@
 // src/main.ts
 import Phaser from 'phaser'
 // 🟦 Importa a Scene modularizada
+
+import { BASE_WIDTH, BASE_HEIGHT } from './config/config'
 import { MainScene, resizeGame } from './scenes/MainScene'
 
 
@@ -8,8 +10,6 @@ import { MainScene, resizeGame } from './scenes/MainScene'
 // CONFIGURAÇÃO PRINCIPAL DO JOGO (RESPONSIVO)
 // 🟦━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-const BASE_WIDTH = 540
-const BASE_HEIGHT = 960
 
 // 🟪━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // CONFIGURANDO O PHASER GAME
