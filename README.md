@@ -1,11 +1,13 @@
 # urban-madness
 A game about urban madness, chaos and routine.
 
-- [Estrutura de pastas e arquivos do projeto](#estrutura-de-pastas-e-arquivos-do-projeto)
+- 📝 [Roadmap](#-roadmap)
+- 🗂️ [Estrutura de pastas e arquivos do projeto](#️-estrutura-de-pastas-e-arquivos-do-projeto)
 
-# Roadmap
 
-# 📝 Roadmap – Urban Madness (2025-07-17 21:34)
+# 📝 Roadmap
+
+2025-07-17 21:34
 
 1. ✅ **Hello Phaser!**  
    - Projeto Vite + TypeScript + Phaser criado  
@@ -51,7 +53,7 @@ A game about urban madness, chaos and routine.
 
 
 
-# Estrutura de pastas e arquivos do projeto
+# 🗂️ Estrutura de pastas e arquivos do projeto
 
 ```sh
 clear && date && tree -a -L 3 -I 'node_modules' -I '.git'
