@@ -39,6 +39,9 @@ export class PlayerControls {
     this.leftBtn.style.width = '60px';
     this.leftBtn.style.height = '60px';
     this.leftBtn.style.touchAction = 'none';
+    // Evita seleção de texto e menu de copiar/compartilhar
+    this.leftBtn.style.userSelect = 'none';
+    this.leftBtn.style.webkitUserSelect = 'none';
     document.body.appendChild(this.leftBtn);
 
     // Botão Direita (mobile): mais próximo da margem e fundo semi-transparente
@@ -59,6 +62,9 @@ export class PlayerControls {
     this.rightBtn.style.width = '60px';
     this.rightBtn.style.height = '60px';
     this.rightBtn.style.touchAction = 'none';
+    // Evita seleção de texto e menu de copiar/compartilhar
+    this.rightBtn.style.userSelect = 'none';
+    this.rightBtn.style.webkitUserSelect = 'none';
     document.body.appendChild(this.rightBtn);
     
     // Eventos touch/mouse
