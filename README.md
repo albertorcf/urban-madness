@@ -2,8 +2,9 @@
 A game about urban madness, chaos and routine.
 
 - 📝 [Roadmap](#-roadmap)
+- 📝 [ToDo List](#-todo-list)
 - 🗂️ [Estrutura de pastas e arquivos do projeto](#️-estrutura-de-pastas-e-arquivos-do-projeto)
-- [Diretrizes para desenvolvimento - Workflow de trabalho](#diretrizes-para-desenvolvimento---workflow-de-trabalho)
+- ⚠️ [Diretrizes para desenvolvimento - Workflow de trabalho](#️-diretrizes-para-desenvolvimento---workflow-de-trabalho)
 
 
 # 📝 Roadmap
@@ -50,9 +51,19 @@ A game about urban madness, chaos and routine.
    - Facilitar manutenção  
    - Preparar para futuras entidades (player/obstacle/bonus/etc.)
 
+
 8. [ ] **ToDo List**  
    - Manter `README.md` ou `TODO.md` atualizado com pendências e ideias  
    - Facilitar controle do projeto e incrementos futuros
+
+
+# 📝 ToDo List
+
+- Customização dos controles mobile
+  - Permitir que o usuário escolha a posição/layout dos botões de controle na tela (ex: D-pad, dois polegares, etc.)
+  - Salvar preferências do usuário para controles mobile
+  - Interface intuitiva para arrastar/posicionar botões
+  - Opção de resetar para layout padrão
 
 
 
@@ -88,7 +99,7 @@ dom 20 jul 2025 19:36:26 -03
 ```
 
 
-# Diretrizes para desenvolvimento - Workflow de trabalho
+# ⚠️ Diretrizes para desenvolvimento - Workflow de trabalho
 
 ## Instruções para ChatBot de IA - Copilot, ChatGPT, Gemini, etc.
 
