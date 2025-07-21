@@ -28,7 +28,7 @@ export class MainScene extends Phaser.Scene {
     // Cria o player como sprite centralizado, próximo ao fundo
     const p = this.physics.add.sprite(BASE_WIDTH / 2, BASE_HEIGHT - 150, 'player')
     p.setOrigin(0.5, 0.5)
-    p.setScale(1.3) // 🔎 Aumenta o tamanho do player para melhor visualização
+    p.setScale(1.8) // 🔎 Aumenta o tamanho do player para melhor visualização
     p.setCollideWorldBounds(true)
     this.player = p
 
