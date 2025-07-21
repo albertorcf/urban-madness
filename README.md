@@ -7,7 +7,8 @@ A game about urban madness, chaos and routine.
 - ⚠️ [Diretrizes para desenvolvimento - Workflow de trabalho](#️-diretrizes-para-desenvolvimento---workflow-de-trabalho)
 - Notas
   - 🖼️ [Workflow de Assets: SVG → PNG](#️-workflow-de-assets-svg--png)
-
+  - 🚧 [Obstáculos](#-obstáculos)
+  - ⏯️ [Botão Start/Stop](#️-botão-startstop)
 
 
 # 📝 Roadmap
@@ -134,3 +135,27 @@ Para facilitar a criação, variação e manutenção dos sprites do jogo, adota
 
 ---
 
+## 🚧 Obstáculos
+
+No jogo, obstáculos descem pela tela e desafiam o jogador a desviar:
+
+- Obstáculos são gerados periodicamente e se movem de cima para baixo.
+- Existem diferentes tipos de obstáculos planejados para aumentar a variedade e dificuldade.
+- Quando o jogador colide com um obstáculo, o sprite do player é tingido de vermelho para indicar a colisão.
+- A lógica de geração, movimentação e colisão dos obstáculos está modularizada na cena principal (`src/scenes/MainScene.ts`).
+- O sistema está preparado para expansão futura, permitindo adicionar novos tipos de obstáculos facilmente.
+
+> 💡 Obstáculos são fundamentais para criar desafio e ritmo no gameplay. A modularização facilita ajustes e expansões.
+
+---
+## ⏯️ Botão Start/Stop
+
+O botão Start/Stop permite pausar e retomar o jogo de forma intuitiva, especialmente em dispositivos móveis:
+
+- O botão é exibido no canto superior direito, com ícone Unicode ou texto, garantindo compatibilidade entre navegadores.
+- O estilo do botão é responsivo, adaptando-se para não sobrepor elementos da interface em telas pequenas.
+- O botão alterna entre os estados de pausa e execução do jogo, mudando o ícone conforme o estado atual.
+- A lógica de exibição, eventos e estilo está centralizada em `src/utils/controls.ts`.
+- Foram realizados ajustes para garantir boa usabilidade e aparência no mobile, evitando sobreposição com a UI do navegador.
+
+> 💡 Um botão de pausa/start bem posicionado e responsivo é essencial para jogabilidade confortável em qualquer dispositivo.
