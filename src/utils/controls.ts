@@ -102,19 +102,21 @@ export class PlayerControls {
     this.downBtn.addEventListener('pointerleave', () => { this.downPressed = false; });
   }
 
-  /** Atualiza movimento do player */
-  update(player: Phaser.GameObjects.Rectangle & { body: Phaser.Physics.Arcade.Body }) {
-    player.body.setVelocity(0);
+  /** Atualiza movimento do player (Rectangle ou Sprite) */
+  update(player: Phaser.Physics.Arcade.Sprite) {
+    const body = player.body as Phaser.Physics.Arcade.Body | null;
+    if (!body) return;
+    body.setVelocity(0);
     // Teclado
-    if (this.cursors?.left.isDown) player.body.setVelocityX(-200);
-    if (this.cursors?.right.isDown) player.body.setVelocityX(200);
-    if (this.cursors?.up.isDown) player.body.setVelocityY(-200);
-    if (this.cursors?.down.isDown) player.body.setVelocityY(200);
+    if (this.cursors?.left.isDown) body.setVelocityX(-200);
+    if (this.cursors?.right.isDown) body.setVelocityX(200);
+    if (this.cursors?.up.isDown) body.setVelocityY(-200);
+    if (this.cursors?.down.isDown) body.setVelocityY(200);
     // Mobile
-    if (this.leftPressed) player.body.setVelocityX(-200);
-    if (this.rightPressed) player.body.setVelocityX(200);
-    if (this.upPressed) player.body.setVelocityY(-200);
-    if (this.downPressed) player.body.setVelocityY(200);
+    if (this.leftPressed) body.setVelocityX(-200);
+    if (this.rightPressed) body.setVelocityX(200);
+    if (this.upPressed) body.setVelocityY(-200);
+    if (this.downPressed) body.setVelocityY(200);
   }
 
   /** Remove botões mobile (opcional, para cenas futuras) */

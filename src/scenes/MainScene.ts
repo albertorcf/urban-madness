@@ -10,25 +10,27 @@ import { resizeGame } from '../utils/responsive'
 
 export class MainScene extends Phaser.Scene {
   // Tipos para player e controles
-  private player!: Phaser.GameObjects.Rectangle & { body: Phaser.Physics.Arcade.Body }
+  private player!: Phaser.Physics.Arcade.Sprite
   private controls!: PlayerControls
 
   constructor() {
     super('MainScene')
   }
 
-  // 🎨 Pré-carregamento de assets (futuro)
+  // 🎨 Pré-carregamento de assets
   preload() {
-    // (Futuramente: carregar assets aqui)
+    // Carrega o sprite PNG do personagem
+    this.load.image('player', 'src/assets/player/person.png')
   }
 
   // 🚀 Criação dos elementos da cena
   create() {
-    // Cria o player (retângulo azul) centralizado, próximo ao fundo
-    const p = this.add.rectangle(BASE_WIDTH / 2, BASE_HEIGHT - 150, 40, 40, 0x3498db)
-    this.physics.add.existing(p)
-    this.player = p as Phaser.GameObjects.Rectangle & { body: Phaser.Physics.Arcade.Body }
-    this.player.body.setCollideWorldBounds(true)
+    // Cria o player como sprite centralizado, próximo ao fundo
+    const p = this.physics.add.sprite(BASE_WIDTH / 2, BASE_HEIGHT - 150, 'player')
+    p.setOrigin(0.5, 0.5)
+    p.setScale(1.3) // 🔎 Aumenta o tamanho do player para melhor visualização
+    p.setCollideWorldBounds(true)
+    this.player = p
 
     // 🏷️ Mostra versão do game no canto inferior direito
     this.add.text(BASE_WIDTH - 10, BASE_HEIGHT - 10, 'v' + GAME_VERSION, {
