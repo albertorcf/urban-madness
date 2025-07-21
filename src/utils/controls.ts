@@ -21,7 +21,7 @@ export class PlayerControls {
     // Evita duplicar
     if (document.getElementById('btn-left') || document.getElementById('btn-right')) return;
     
-    // Botão Esquerda (mobile): mais próximo da margem e fundo semi-transparente
+    // ◀️ Botão Esquerda (mobile): mais próximo da margem e fundo semi-transparente
     this.leftBtn = document.createElement('button');
     this.leftBtn.id = 'btn-left';
     this.leftBtn.innerText = '◀️';
@@ -44,7 +44,7 @@ export class PlayerControls {
     this.leftBtn.style.webkitUserSelect = 'none';
     document.body.appendChild(this.leftBtn);
 
-    // Botão Direita (mobile): mais próximo da margem e fundo semi-transparente
+    // ▶️ Botão Direita (mobile): mais próximo da margem e fundo semi-transparente
     this.rightBtn = document.createElement('button');
     this.rightBtn.id = 'btn-right';
     this.rightBtn.innerText = '▶️';
