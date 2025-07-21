@@ -136,7 +136,7 @@ export class PlayerControls {
     if (document.getElementById('btn-stop-start')) return;
     this.stopBtn = document.createElement('button');
     this.stopBtn.id = 'btn-stop-start';
-    this.stopBtn.innerText = '⏸';
+    this.stopBtn.innerText = '❚❚';
     Object.assign(this.stopBtn.style, {
       position: 'fixed',
       top: '18px',
@@ -168,7 +168,7 @@ export class PlayerControls {
         this.stopBtn!.innerText = '▶';
         if (this.pauseCallback) this.pauseCallback();
       } else {
-        this.stopBtn!.innerText = '⏸';
+        this.stopBtn!.innerText = '❚❚';
         if (this.resumeCallback) this.resumeCallback();
       }
     });
