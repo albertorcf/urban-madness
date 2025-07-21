@@ -3,6 +3,9 @@
 import Phaser from 'phaser'
 
 export class PlayerControls {
+  private stopBtn: HTMLButtonElement | null = null;
+  private pauseCallback: (() => void) | null = null;
+  private resumeCallback: (() => void) | null = null;
   private cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined;
   private leftBtn: HTMLButtonElement | null = null;
   private rightBtn: HTMLButtonElement | null = null;
@@ -18,6 +21,7 @@ export class PlayerControls {
     this.cursors = scene.input.keyboard?.createCursorKeys();
     // Botões mobile
     this.createMobileButtons();
+    this.createStopStartButton();
   }
 
   /** Cria botões de controle para mobile */
@@ -31,14 +35,12 @@ export class PlayerControls {
       zIndex: '10',
       fontSize: '2.2rem',
       backgroundColor: 'rgba(255,255,255,0.15)', // círculo mais claro e transparente
-      opacity: '1',
       border: 'none',
       borderRadius: '50%',
       width: '54px',
       height: '54px',
       touchAction: 'none',
       userSelect: 'none',
-      webkitUserSelect: 'none',
       boxShadow: '0 0 8px 2px rgba(255,255,255,0.10)',
       color: '#222',
       outline: 'none',
@@ -125,5 +127,56 @@ export class PlayerControls {
     this.rightBtn?.remove();
     this.upBtn?.remove();
     this.downBtn?.remove();
+    this.stopBtn?.remove();
+  }
+
+  /** Cria botão STOP/START no topo/direita */
+  /** Cria botão STOP/START no topo/direita */
+  private createStopStartButton() {
+    if (document.getElementById('btn-stop-start')) return;
+    this.stopBtn = document.createElement('button');
+    this.stopBtn.id = 'btn-stop-start';
+    this.stopBtn.innerText = '⏸';
+    Object.assign(this.stopBtn.style, {
+      position: 'fixed',
+      top: '18px',
+      right: '18px',
+      zIndex: '20',
+      fontSize: '2.2rem',
+      backgroundColor: 'rgba(255,255,255,0.15)',
+      color: '#222',
+      border: 'none',
+      borderRadius: '50%',
+      width: '54px',
+      height: '54px',
+      boxShadow: '0 0 8px 2px rgba(255,255,255,0.10)',
+      outline: 'none',
+      cursor: 'pointer',
+      transition: 'background 0.2s',
+      userSelect: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '0',
+    });
+    document.body.appendChild(this.stopBtn);
+
+    let isPaused = false;
+    this.stopBtn.addEventListener('click', () => {
+      isPaused = !isPaused;
+      if (isPaused) {
+        this.stopBtn!.innerText = '▶';
+        if (this.pauseCallback) this.pauseCallback();
+      } else {
+        this.stopBtn!.innerText = '⏸';
+        if (this.resumeCallback) this.resumeCallback();
+      }
+    });
+  }
+
+  /** Permite registrar callbacks para pause/resume */
+  onPauseResume(pauseCb: () => void, resumeCb: () => void) {
+    this.pauseCallback = pauseCb;
+    this.resumeCallback = resumeCb;
   }
 }

@@ -26,7 +26,13 @@ export class MainScene extends Phaser.Scene {
 
   // 🚀 Criação dos elementos da cena
   create() {
-    // 🟥━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    // Instancia controles e registra callbacks de pause/resume
+    this.controls = new PlayerControls(this)
+    this.controls.onPauseResume(
+      () => this.scene.pause(),
+      () => this.scene.resume()
+    )
+    // 🟥━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     // CRIA GRUPO DE OBSTÁCULOS
     // 🟥━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     this.obstacles = this.physics.add.group()
