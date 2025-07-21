@@ -64,6 +64,7 @@ A game about urban madness, chaos and routine.
   - Salvar preferências do usuário para controles mobile
   - Interface intuitiva para arrastar/posicionar botões
   - Opção de resetar para layout padrão
+  - Melhorar centralização vertical dos ícones Unicode nos botões mobile (alguns símbolos podem parecer "deslocados" dependendo do navegador/fonte)
 
 
 

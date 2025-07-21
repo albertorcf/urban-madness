@@ -43,6 +43,10 @@ export class PlayerControls {
       color: '#222',
       outline: 'none',
       transition: 'background 0.2s',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '0',
     };
 
     // ▲ Botão Cima (lado esquerdo, acima do botão esquerda)
