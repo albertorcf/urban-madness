@@ -25,88 +25,62 @@ export class PlayerControls {
     // Evita duplicar
     if (document.getElementById('btn-left') || document.getElementById('btn-right') || document.getElementById('btn-up') || document.getElementById('btn-down')) return;
     
+    // Design padrão para todos os botões
+    const btnStyle = {
+      position: 'fixed',
+      zIndex: '10',
+      fontSize: '2.2rem',
+      backgroundColor: 'rgba(255,255,255,0.15)', // círculo mais claro e transparente
+      opacity: '1',
+      border: 'none',
+      borderRadius: '50%',
+      width: '54px',
+      height: '54px',
+      touchAction: 'none',
+      userSelect: 'none',
+      webkitUserSelect: 'none',
+      boxShadow: '0 0 8px 2px rgba(255,255,255,0.10)',
+      color: '#222',
+      outline: 'none',
+      transition: 'background 0.2s',
+    };
+
     // ▲ Botão Cima (lado esquerdo, acima do botão esquerda)
     this.upBtn = document.createElement('button');
     this.upBtn.id = 'btn-up';
     this.upBtn.innerText = '▲';
-    this.upBtn.style.position = 'fixed';
+    Object.assign(this.upBtn.style, btnStyle);
     this.upBtn.style.left = '10px';
     this.upBtn.style.top = '40%';
-    this.upBtn.style.transform = 'translateY(-50%)';
-    this.upBtn.style.zIndex = '10';
-    this.upBtn.style.fontSize = '2.2rem';
-    this.upBtn.style.backgroundColor = '#222';
-    this.upBtn.style.opacity = '0.6';
-    this.upBtn.style.border = 'none';
-    this.upBtn.style.borderRadius = '50%';
-    this.upBtn.style.width = '50px';
-    this.upBtn.style.height = '50px';
-    this.upBtn.style.touchAction = 'none';
-    this.upBtn.style.userSelect = 'none';
-    this.upBtn.style.webkitUserSelect = 'none';
     document.body.appendChild(this.upBtn);
 
-    // ◀️ Botão Esquerda (mobile): mais próximo da margem e fundo semi-transparente, mais abaixo
+    // ◀️ Botão Esquerda (mobile): mais próximo da margem e fundo semi-transparente, mais acima
     this.leftBtn = document.createElement('button');
     this.leftBtn.id = 'btn-left';
-    this.leftBtn.innerText = '◀️';
-    this.leftBtn.style.position = 'fixed';
+    this.leftBtn.innerText = '◀';
+    Object.assign(this.leftBtn.style, btnStyle);
     this.leftBtn.style.left = '10px';
-    this.leftBtn.style.top = '60%';
-    this.leftBtn.style.transform = 'translateY(-50%)';
-    this.leftBtn.style.zIndex = '10';
-    this.leftBtn.style.fontSize = '2.5rem';
-    this.leftBtn.style.backgroundColor = '#222';
-    this.leftBtn.style.opacity = '0.6';
-    this.leftBtn.style.border = 'none';
-    this.leftBtn.style.borderRadius = '50%';
-    this.leftBtn.style.width = '60px';
-    this.leftBtn.style.height = '60px';
-    this.leftBtn.style.touchAction = 'none';
-    this.leftBtn.style.userSelect = 'none';
-    this.leftBtn.style.webkitUserSelect = 'none';
+    this.leftBtn.style.top = '54%'; // mais próximo do botão cima
+    this.leftBtn.style.backgroundColor = btnStyle.backgroundColor;
     document.body.appendChild(this.leftBtn);
 
     // ▼ Botão Baixo (lado direito, acima do botão direita)
     this.downBtn = document.createElement('button');
     this.downBtn.id = 'btn-down';
     this.downBtn.innerText = '▼';
-    this.downBtn.style.position = 'fixed';
+    Object.assign(this.downBtn.style, btnStyle);
     this.downBtn.style.right = '10px';
     this.downBtn.style.top = '40%';
-    this.downBtn.style.transform = 'translateY(-50%)';
-    this.downBtn.style.zIndex = '10';
-    this.downBtn.style.fontSize = '2.2rem';
-    this.downBtn.style.backgroundColor = '#222';
-    this.downBtn.style.opacity = '0.6';
-    this.downBtn.style.border = 'none';
-    this.downBtn.style.borderRadius = '50%';
-    this.downBtn.style.width = '50px';
-    this.downBtn.style.height = '50px';
-    this.downBtn.style.touchAction = 'none';
-    this.downBtn.style.userSelect = 'none';
-    this.downBtn.style.webkitUserSelect = 'none';
     document.body.appendChild(this.downBtn);
 
-    // ▶️ Botão Direita (mobile): mais próximo da margem e fundo semi-transparente, mais abaixo
+    // ▶️ Botão Direita (mobile): mais próximo da margem e fundo semi-transparente, mais acima
     this.rightBtn = document.createElement('button');
     this.rightBtn.id = 'btn-right';
-    this.rightBtn.innerText = '▶️';
-    this.rightBtn.style.position = 'fixed';
+    this.rightBtn.innerText = '▶';
+    Object.assign(this.rightBtn.style, btnStyle);
     this.rightBtn.style.right = '10px';
-    this.rightBtn.style.top = '60%';
-    this.rightBtn.style.transform = 'translateY(-50%)';
-    this.rightBtn.style.zIndex = '10';
-    this.rightBtn.style.fontSize = '2.5rem';
-    this.rightBtn.style.backgroundColor = '#222';
-    this.rightBtn.style.opacity = '0.6';
-    this.rightBtn.style.border = 'none';
-    this.rightBtn.style.borderRadius = '50%';
-    this.rightBtn.style.width = '60px';
-    this.rightBtn.style.height = '60px';
-    this.rightBtn.style.touchAction = 'none';
-    this.rightBtn.style.userSelect = 'none';
-    this.rightBtn.style.webkitUserSelect = 'none';
+    this.rightBtn.style.top = '54%'; // mais próximo do botão baixo
+    this.rightBtn.style.backgroundColor = btnStyle.backgroundColor;
     document.body.appendChild(this.rightBtn);
     
     // Eventos touch/mouse
