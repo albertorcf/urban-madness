@@ -1,3 +1,14 @@
+# Ignorar arquivos binários gerados automaticamente em src/assets
+src/assets/**/*.png
+src/assets/**/*.jpg
+src/assets/**/*.jpeg
+src/assets/**/*.webp
+src/assets/**/*.gif
+src/assets/**/*.bmp
+src/assets/**/*.tiff
+src/assets/**/*.ico
+# Apenas SVGs e fontes vetoriais ficam versionados
+
 # Logs
 logs
 *.log
