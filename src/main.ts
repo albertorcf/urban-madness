@@ -3,7 +3,8 @@ import Phaser from 'phaser'
 // 🟦 Importa a Scene modularizada
 
 import { BASE_WIDTH, BASE_HEIGHT } from './config/config'
-import { MainScene, resizeGame } from './scenes/MainScene'
+import { MainScene } from './scenes/MainScene'
+import { resizeGame } from './utils/responsive'
 
 
 // 🟦━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
