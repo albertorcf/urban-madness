@@ -36,7 +36,8 @@ export function resizeGame(): void {
   canvas.style.height = height + 'px';
 
   // 🎯 Centralização extra: ajusta posição para centrar mesmo em browsers mobile bugados
-  canvas.style.position = 'absolute';
-  canvas.style.left = `calc(50% - ${width / 2}px)`;
-  canvas.style.top = `calc(50% - ${height / 2}px)`;
+  canvas.style.position = 'fixed';
+  canvas.style.left = '50%';
+  canvas.style.top = '50%';
+  canvas.style.transform = `translate(-50%, -50%)`;
 }

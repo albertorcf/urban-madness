@@ -26,7 +26,7 @@ export class PlayerControls {
     this.leftBtn.id = 'btn-left';
     this.leftBtn.innerText = '◀️';
     this.leftBtn.style.position = 'fixed';
-    this.leftBtn.style.left = '0'; // ⬅️ Agora rente à margem esquerda
+    this.leftBtn.style.left = '10px'; // ⬅️ Pequeno espaçamento para garantir visibilidade
     this.leftBtn.style.top = '50%';
     this.leftBtn.style.transform = 'translateY(-50%)';
     this.leftBtn.style.zIndex = '10';
@@ -46,7 +46,7 @@ export class PlayerControls {
     this.rightBtn.id = 'btn-right';
     this.rightBtn.innerText = '▶️';
     this.rightBtn.style.position = 'fixed';
-    this.rightBtn.style.right = '0'; // ⬅️ Agora rente à margem direita
+    this.rightBtn.style.right = '10px'; // ⬅️ Pequeno espaçamento para garantir visibilidade
     this.rightBtn.style.top = '50%';
     this.rightBtn.style.transform = 'translateY(-50%)';
     this.rightBtn.style.zIndex = '10';
