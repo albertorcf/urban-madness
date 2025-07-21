@@ -34,7 +34,7 @@ A game about urban madness, chaos and routine.
    - Tipagem Typescript sem erros
    - Arquivo de configurações globais criado em `src/config/config`.ts
 
-4. [ ] **Responsividade e controles mobile**  
+4. ✅ **Responsividade e controles mobile**  
    - Ajustar o viewport conforme a tela do usuário, mantendo a proporção  
    - Garantir botões móveis (mobile first)  
    - Manter funcionalidade no desktop

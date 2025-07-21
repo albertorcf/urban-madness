@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cabeça (marrom claro) -->
+  <ellipse cx="32" cy="17" rx="12" ry="10" fill="#B97A56" stroke="#8B5E3C" stroke-width="2"></ellipse>
+  <!-- Cabelo -->
+  <ellipse cx="32" cy="14" rx="12" ry="10" fill="#7B4C21"></ellipse>
+  <!-- Corpo (casaco azul escuro) -->
+  <rect x="22" y="25" width="20" height="17" rx="7" fill="#1A2A3A" stroke="#113159" stroke-width="2"></rect>
+  <!-- Braço esquerdo -->
+  <rect x="10" y="32" width="10" height="7" rx="3" fill="#B97A56" stroke="#8B5E3C" stroke-width="2" transform="rotate(-8 10 32)"></rect>
+  <!-- Braço direito -->
+  <rect x="44" y="32" width="10" height="7" rx="3" fill="#B97A56" stroke="#8B5E3C" stroke-width="2" transform="rotate(8 54 32)"></rect>
+  <!-- Pernas (jeans azul) -->
+  <rect x="25" y="43" width="6" height="13" rx="3" fill="#406C8E" stroke="#27405C" stroke-width="2" transform="rotate(-6 25 43)"></rect>
+  <rect x="33" y="43" width="6" height="13" rx="3" fill="#406C8E" stroke="#27405C" stroke-width="2" transform="rotate(6 39 43)"></rect>
+  <!-- Sombra dos pés -->
+  <ellipse cx="28" cy="56" rx="3" ry="2" fill="#666" opacity="0.2"></ellipse>
+  <ellipse cx="36" cy="56" rx="3" ry="2" fill="#666" opacity="0.2"></ellipse>
+  <!-- Tênis (branco com cinza) -->
+  <rect x="25" y="53" width="6" height="5" rx="2" fill="#F4F4F4" stroke="#C2C2C2" stroke-width="1"></rect>
+  <rect x="33" y="53" width="6" height="5" rx="2" fill="#F4F4F4" stroke="#C2C2C2" stroke-width="1"></rect>
+</svg>
