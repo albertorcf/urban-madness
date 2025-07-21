@@ -5,6 +5,9 @@ A game about urban madness, chaos and routine.
 - 📝 [ToDo List](#-todo-list)
 - 🗂️ [Estrutura de pastas e arquivos do projeto](#️-estrutura-de-pastas-e-arquivos-do-projeto)
 - ⚠️ [Diretrizes para desenvolvimento - Workflow de trabalho](#️-diretrizes-para-desenvolvimento---workflow-de-trabalho)
+- Notas
+  - 🖼️ [Workflow de Assets: SVG → PNG](#️-workflow-de-assets-svg--png)
+
 
 
 # 📝 Roadmap
@@ -105,3 +108,29 @@ dom 20 jul 2025 19:36:26 -03
 ## Instruções para ChatBot de IA - Copilot, ChatGPT, Gemini, etc.
 
 - Manter os comentários existentes e acrescente novos comentários onde achar relevante. Separe os blocos de código que implementem funcionalidades diferentes com comentários bem descritivos no início de cada um. Pode usar emojis a vontade para destacar comentários e emojis de separadores para separar blocos.
+
+
+# Notas
+
+---
+## 🖼️ Workflow de Assets: SVG → PNG
+
+Para facilitar a criação, variação e manutenção dos sprites do jogo, adotamos o seguinte workflow para assets gráficos:
+
+- **Crie os sprites e imagens em formato SVG** e salve-os em `src/assets/`. O SVG é ideal para edição, variações e geração de spritesheets.
+- **Não versionamos arquivos binários** (PNG, JPG, etc.) no repositório. O `.gitignore` já está configurado para ignorar esses formatos em `src/assets/`.
+- **Conversão automática:** Use o script `scripts/svg-to-png.js` para converter todos os SVGs em PNGs compatíveis com Phaser. Basta rodar:
+  ```sh
+  node scripts/svg-to-png.js
+  ```
+  Os PNGs gerados ficam prontos para uso no game, mas não são versionados.
+- **Variações e spritesheets:** Como o SVG é editável, é fácil criar novas versões, animações ou spritesheets. Basta editar o SVG e rodar o script novamente.
+- **Vantagens:**
+  - Evita poluir o repositório com binários pesados
+  - Facilita colaboração e controle de versões
+  - Permite automação e geração de múltiplos formatos
+
+> 💡 Recomenda-se manter os SVGs organizados e nomeados de forma clara para facilitar a automação e futuras expansões do projeto.
+
+---
+
