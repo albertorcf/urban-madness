@@ -136,19 +136,20 @@ export class PlayerControls {
     if (document.getElementById('btn-stop-start')) return;
     this.stopBtn = document.createElement('button');
     this.stopBtn.id = 'btn-stop-start';
-    this.stopBtn.innerText = '❚❚';
+    this.stopBtn.innerText = 'STOP';
     Object.assign(this.stopBtn.style, {
       position: 'fixed',
-      top: '18px',
-      right: '18px',
+      top: '28px',  // ⚠️
+      right: '12px',
       zIndex: '20',
-      fontSize: '2.2rem',
-      backgroundColor: 'rgba(255,255,255,0.15)',
-      color: '#222',
+      fontSize: '1.05rem',
+      fontWeight: 'bold',
+      backgroundColor: 'rgba(220, 53, 69, 0.18)', // vermelho suave transparente
+      color: '#c82333',
       border: 'none',
-      borderRadius: '50%',
-      width: '54px',
-      height: '54px',
+      borderRadius: '12px',
+      width: '70px',
+      height: '32px',
       boxShadow: '0 0 8px 2px rgba(255,255,255,0.10)',
       outline: 'none',
       cursor: 'pointer',
@@ -158,6 +159,7 @@ export class PlayerControls {
       alignItems: 'center',
       justifyContent: 'center',
       padding: '0',
+      letterSpacing: '1px',
     });
     document.body.appendChild(this.stopBtn);
 
@@ -165,10 +167,14 @@ export class PlayerControls {
     this.stopBtn.addEventListener('click', () => {
       isPaused = !isPaused;
       if (isPaused) {
-        this.stopBtn!.innerText = '▶';
+        this.stopBtn!.innerText = 'START';
+        this.stopBtn!.style.backgroundColor = 'rgba(40, 167, 69, 0.18)'; // verde suave transparente
+        this.stopBtn!.style.color = '#28a745';
         if (this.pauseCallback) this.pauseCallback();
       } else {
-        this.stopBtn!.innerText = '❚❚';
+        this.stopBtn!.innerText = 'STOP';
+        this.stopBtn!.style.backgroundColor = 'rgba(220, 53, 69, 0.18)'; // vermelho suave transparente
+        this.stopBtn!.style.color = '#c82333';
         if (this.resumeCallback) this.resumeCallback();
       }
     });
