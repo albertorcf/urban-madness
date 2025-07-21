@@ -6,13 +6,15 @@
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "svg2png": "node scripts/svg-to-png.js"
   },
   "devDependencies": {
     "typescript": "~5.8.3",
     "vite": "^7.0.4"
   },
   "dependencies": {
-    "phaser": "^3.90.0"
+    "phaser": "^3.90.0",
+    "sharp": "^0.34.3"
   }
 }
